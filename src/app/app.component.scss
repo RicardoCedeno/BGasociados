@@ -1,0 +1,24 @@
+nav{
+    display: flex;
+    flex-direction: row;
+}
+
+.image-container{
+    width: 100%;
+    margin-left: 20px;
+}
+
+.image-container img{
+    max-width: 15vw;
+}
+
+.icon-container{
+    margin-right: 10vw;
+}
+i{
+    font-size: 10vw;
+}
+
+.app-carousel{
+    width: 100px;
+}
