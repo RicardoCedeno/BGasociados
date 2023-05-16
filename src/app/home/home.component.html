@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="home.component.scss">
 </head>
 <body>
     <section class="section section-1">
@@ -13,25 +14,98 @@
 
     <section class="section section-2">
         <div class="title">B&GASOCIADOS <br> ABOGADOS & CONTADORES <br> S.A.S</div>
-        <div class="text">
+        <div class="title">
             Somos una firma integral de consultoría, formada por un equipo interdisciplinario de abogado y contadores, que ofrecemos asesorías en las áreas del derecho comercial, corporativo, impuestos y tributario, inversión extranjera en Colombia, contratos, sociedades, laboral, seguridad social y pensiones, contabilidad internacional bajo NIIF-NIC y finanzas, entre otras.
             Estamos especializados en proveer servicios profesionales personalizados, con gran énfasis en los principios de atención más altos que se puedan ofrecer a los clientes actuales y potenciales.
         </div>
-        <button>CONOCER NUESTRO EQUIPO <i class="fa-solid fa-arrow-right"></i></button>
+        <button class="button-type-1">CONOCER NUESTRO EQUIPO <i class="fa-solid fa-arrow-right"></i></button>
+
+        <div class="exchanges">
+            <div *ngFor="let currency of exchangeRates">
+                <div *ngIf="currency.name=='COP'" >
+                    <div>Dólar Hoy {{currency.rate |formatNumber}}</div>
+                    {{setCopRate(currency.rate)}}
+                </div>
+        
+                <div *ngIf="currency.name=='EUR'">
+                    <div>Euro hoy {{((1/currency.rate) * copRate) | formatNumber}}</div>
+                </div>
+                
+            </div>
+        </div>
+
+    </section>
+
+    <section class="section-3 section">
+        <div class="title">SERVICIOS ÁREA LEGAL & TRIBUTARIA</div>
+
+        <hr>
+
+        <div class="separator-container"><img src="https://cdn-icons-png.flaticon.com/512/7528/7528271.png" alt=""></div>
+    </section>
+
+    <section class="section-4 section">
+       <div class="option">
+        <div class="image-container"><img src="https://rodriguezasociados.co/wp-content/uploads/2018/07/Derecho-comercial-y-corporativo-1024x662.jpg" alt=""></div>
+        <div class="title-image">
+            <div class="title-image-description">DERECHO CORPORATIVO Y COMERCIAL</div>
+        </div>
+        <div class="more">CONOCER MÁS <button>+</button></div>
+       </div>
+
+       <div class="option">
+        <div class="image-container"><img src="https://rodriguezasociados.co/wp-content/uploads/2019/07/119-1024x683.jpg" alt=""></div>
+        <div class="title-image">
+            <div class="title-image-description">ASESORÍA EN IMPUESTOS</div>
+        </div>
+        <div class="more">CONOCER MÁS <button>+</button></div>
+       </div>
+
+       <div class="option">
+        <div class="image-container"><img src="https://rodriguezasociados.co/wp-content/uploads/2018/07/Inversion-Extranjera-1024x596.jpg" alt=""></div>
+        <div class="title-image">
+            <div class="title-image-description">INVERSIÓN EXTRANJERA Y OFFSHORE</div>
+        </div>
+        <div class="more">CONOCER MÁS <button>+</button></div>
+       </div>
+    </section>
+
+    <section class="section-5">
+        <button class="button-type-2">TODOS NUESTROS SERVICIOS <i class="fa-solid fa-arrow-right"></i></button>
+        <div class="title">Testimonios</div>
+        <div class="title-2">Lo que opinan nuestros clientes</div>
+
+        <div class="separator-container"><img src="https://cdn-icons-png.flaticon.com/512/10797/10797089.png" alt=""></div>
+        <hr>
+
+        <div class="testimonials" *ngFor="let testimony of testimonials">
+            <div class="text">{{testimony.testimony}}</div>
+            <div class="text-name">{{testimony.name}}, {{testimony.country}}</div>
+            <div class="photo-container"><img [src]="testimony.image" alt=""></div>
+        </div>
+        
+    </section>
+
+    <section class="section-6">
+        <div class="title">BLOG</div>
+        <div class="title-2">NOVEDADES Y PUBLICACIONES</div>
+
+        <div class="separator-container"><img src="https://cdn-icons-png.flaticon.com/512/3247/3247199.png" alt=""></div>
+        <hr>
+
+        <div *ngFor="let blog of blogs" class="blogs">
+            <div class="blog-image-container"><img [src]="blog.image" alt=""></div>
+            <div class="text-blog">
+                <div class="blog-date">{{blog.date}}</div>
+                <div class="blog-title">{{blog.title}}</div>
+                <div class="blog-content">{{blog.content}}</div>
+                <button class="button-type-2">LEER MÁS</button>
+            </div>
+        </div>
+
     </section>
 
     
-    <div *ngFor="let currency of exchangeRates">
-        <div *ngIf="currency.name=='COP'" >
-            <div>Dólar Hoy {{currency.rate |formatNumber}}</div>
-            {{setCopRate(currency.rate)}}
-        </div>
-
-        <div *ngIf="currency.name=='EUR'">
-            <div>Euro hoy {{((1/currency.rate) * copRate) | formatNumber}}</div>
-        </div>
-        
-    </div>
 
 </body>
 </html>
