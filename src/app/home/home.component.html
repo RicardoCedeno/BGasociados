@@ -1,1 +1,37 @@
-<p>home works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="section section-1">
+        <app-carousel></app-carousel>
+    </section>
+
+    <section class="section section-2">
+        <div class="title">B&GASOCIADOS <br> ABOGADOS & CONTADORES <br> S.A.S</div>
+        <div class="text">
+            Somos una firma integral de consultoría, formada por un equipo interdisciplinario de abogado y contadores, que ofrecemos asesorías en las áreas del derecho comercial, corporativo, impuestos y tributario, inversión extranjera en Colombia, contratos, sociedades, laboral, seguridad social y pensiones, contabilidad internacional bajo NIIF-NIC y finanzas, entre otras.
+            Estamos especializados en proveer servicios profesionales personalizados, con gran énfasis en los principios de atención más altos que se puedan ofrecer a los clientes actuales y potenciales.
+        </div>
+        <button>CONOCER NUESTRO EQUIPO <i class="fa-solid fa-arrow-right"></i></button>
+    </section>
+
+    
+    <div *ngFor="let currency of exchangeRates">
+        <div *ngIf="currency.name=='COP'" >
+            <div>Dólar Hoy {{currency.rate |formatNumber}}</div>
+            {{setCopRate(currency.rate)}}
+        </div>
+
+        <div *ngIf="currency.name=='EUR'">
+            <div>Euro hoy {{((1/currency.rate) * copRate) | formatNumber}}</div>
+        </div>
+        
+    </div>
+
+</body>
+</html>
