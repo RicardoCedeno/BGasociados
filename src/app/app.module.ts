@@ -7,7 +7,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import {HttpClientModule} from '@angular/common/http';
-import { FormatNumberPipe } from './pipes/format-number.pipe'
+import { FormatNumberPipe } from './pipes/format-number.pipe';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { FormatNumberPipe } from './pipes/format-number.pipe'
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
