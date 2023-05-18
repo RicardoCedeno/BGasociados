@@ -1,0 +1,57 @@
+.title-1{
+    color: var(--orange);
+    font-size: 34px;
+    text-align: center;
+}
+
+
+.title-2{
+    color: var(--gray);
+    font-size: 26px;
+    text-align: center;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-1{
+    background: var(--dark-blue);
+    padding-bottom: 40px;
+    margin-top: 40px;
+}
+
+.section-2{
+    padding-top: 40px;
+}
+
+.image-container{
+    width: 100%
+}
+
+.image-container img{
+    width: 80vw;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team{
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.team-name-button{
+    background: var(--orange);
+    color: var(--white);
+    max-width: fit-content;
+    padding: 5px 10px 5px 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-name-text{
+    color: var(--gray);
+    text-align: center;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="section-1">
+        <div class="title-1">NUESTRO EQUIPO</div>
+        <div class="title-2">Contamos con un equipo capacitado y con alta experiencia en asuntos jurídicos y financieros de primera categoría, enfocado en un servicio profesional, personalizado y eficiente de acuerdo a cada una de las necesidades de nuestros clientes.</div>
+        <div></div>
+    </section>
+
+    <section class="section-2">
+        <div *ngFor="let people of team">
+            <div class="team">
+                <div class="image-container"><img [src]="people.image" alt=""></div>
+                <button class="team-name-button">{{people.name}}</button>
+                <div class="team-name-text">{{people.role}}</div>
+            </div>
+            
+        </div>
+    </section>
+</body>
+</html>

@@ -9,8 +9,9 @@
 <body>
   <nav>
     <div class="image-container"><img src="https://cdn-icons-png.flaticon.com/512/10577/10577540.png" alt=""></div>
-    <div class="icon-container"><i class="fa-solid fa-bars"></i></div>
+    <div class="icon-container" (click)="controlMenu()"><i class="fa-solid fa-bars"></i></div>
   </nav>
+  <app-nav-bar id="nav-bar"></app-nav-bar>
 
   <router-outlet></router-outlet>
 </body>

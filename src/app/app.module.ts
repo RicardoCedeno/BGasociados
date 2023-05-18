@@ -8,6 +8,11 @@ import { HomeComponent } from './home/home.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import {HttpClientModule} from '@angular/common/http';
 import { FormatNumberPipe } from './pipes/format-number.pipe';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { OurTeamComponent } from './our-team/our-team.component';
+import { ActivatedRoute } from '@angular/router';
+import { OurFirmComponent } from './our-firm/our-firm.component';
+import { ServiciosLegalesComponent } from './servicios-legales/servicios-legales.component';
 
 
 @NgModule({
@@ -16,6 +21,10 @@ import { FormatNumberPipe } from './pipes/format-number.pipe';
     HomeComponent,
     CarouselComponent,
     FormatNumberPipe,
+    NavBarComponent,
+    OurTeamComponent,
+    OurFirmComponent,
+    ServiciosLegalesComponent,
   ],
   imports: [
     BrowserModule,
