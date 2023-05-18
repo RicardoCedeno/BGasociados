@@ -6,6 +6,7 @@ import { OurFirmComponent } from './our-firm/our-firm.component';
 import { ServiciosLegalesComponent } from './servicios-legales/servicios-legales.component';
 import { ServicesForForeignersComponent } from './services-for-foreigners/services-for-foreigners.component';
 import { ColombiansAbroadComponent } from './colombians-abroad/colombians-abroad.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 const routes: Routes = [
   {path:'inicio', component:HomeComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path:'nuestra-firma', component:OurFirmComponent},
   {path: 'servicios-legales', component:ServiciosLegalesComponent},
   {path:'servicios-para-extranjeros', component:ServicesForForeignersComponent},
-  {path:'colombianos-en-el-exterior', component:ColombiansAbroadComponent}
+  {path:'colombianos-en-el-exterior', component:ColombiansAbroadComponent},
+  {path:'contactanos', component:ContactUsComponent}
 ];
 
 @NgModule({
