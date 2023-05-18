@@ -16,6 +16,7 @@ import { ServiciosLegalesComponent } from './servicios-legales/servicios-legales
 import { ServicesForForeignersComponent } from './services-for-foreigners/services-for-foreigners.component';
 import { ColombiansAbroadComponent } from './colombians-abroad/colombians-abroad.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { MapComponent } from './map/map.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     ServicesForForeignersComponent,
     ColombiansAbroadComponent,
     ContactUsComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
