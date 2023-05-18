@@ -14,6 +14,7 @@ import { ActivatedRoute } from '@angular/router';
 import { OurFirmComponent } from './our-firm/our-firm.component';
 import { ServiciosLegalesComponent } from './servicios-legales/servicios-legales.component';
 import { ServicesForForeignersComponent } from './services-for-foreigners/services-for-foreigners.component';
+import { ColombiansAbroadComponent } from './colombians-abroad/colombians-abroad.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { ServicesForForeignersComponent } from './services-for-foreigners/servic
     OurFirmComponent,
     ServiciosLegalesComponent,
     ServicesForForeignersComponent,
+    ColombiansAbroadComponent,
   ],
   imports: [
     BrowserModule,

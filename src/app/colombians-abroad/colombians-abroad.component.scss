@@ -1,0 +1,49 @@
+.square-image{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-1{
+    background: var(--dark-blue);
+    padding-bottom: 40px;
+}
+.square-image img{
+    width: 100vw;
+}
+
+.title-1{
+    color: var(--orange);
+    font-size: 34px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.text-1{
+    color: var(--gray);
+    font-size: 24px;
+    text-align: center;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+}
+
+.title-2{
+    color: var(--orange);
+    font-size: 34px;
+    text-align: center;
+}
+
+.square{
+    padding-top: 40px;
+
+}
+
+
+.square-2, .square-4, .square-6{
+    background: var(--dark-blue);
+    color: var(--white);
+    font-weight: 600;
+ 
+}
