@@ -13,6 +13,7 @@ import { OurTeamComponent } from './our-team/our-team.component';
 import { ActivatedRoute } from '@angular/router';
 import { OurFirmComponent } from './our-firm/our-firm.component';
 import { ServiciosLegalesComponent } from './servicios-legales/servicios-legales.component';
+import { ServicesForForeignersComponent } from './services-for-foreigners/services-for-foreigners.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { ServiciosLegalesComponent } from './servicios-legales/servicios-legales
     OurTeamComponent,
     OurFirmComponent,
     ServiciosLegalesComponent,
+    ServicesForForeignersComponent,
   ],
   imports: [
     BrowserModule,

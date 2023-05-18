@@ -1,0 +1,46 @@
+.title-1{
+    font-size: 34px;
+    text-align: center;
+    color: var(--orange);
+    padding-top: 80px;
+}
+
+.text-1{
+    color: var(--gray);
+    font-size: 24px;
+    text-align: center;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-2{
+    color: var(--gray);
+    font-size: 18px;
+}
+
+
+.section-1{
+    background: var(--dark-blue);
+}
+
+.image-container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-container img{
+    width: 100vw;
+}
+
+.button-1{
+    color: var(--white);
+    background: var(--dark-blue);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: flex;
+    padding: 10px 20px 10px 20px;
+    margin-top: 20px;
+}
