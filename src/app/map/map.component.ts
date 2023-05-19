@@ -10,8 +10,8 @@ import * as L from 'leaflet'
 export class MapComponent implements OnInit {
   ngOnInit(): void {
     this.initMap()
-    this.createMarker()
     this.refreshMap()
+    this.setBgasociadosMarker()
     
     
   }
@@ -27,15 +27,24 @@ export class MapComponent implements OnInit {
     }).addTo(this.map)
   }
 
-  createMarker(){
-    this.marker1=L.marker([51.5, -0.09]).addTo(this.map)
-  }
+  iconUser=L.icon({
+    iconUrl:'https://cdn-icons-png.flaticon.com/512/3603/3603850.png',
+    iconSize:[50,50],
+    iconAnchor:[16,16],
+  })
+
+  iconBGasociados=L.icon({
+    iconUrl:'https://cdn-icons-png.flaticon.com/512/1051/1051126.png',
+    iconSize:[50,50],
+    iconAnchor:[16,16],
+  })
+  
 
   refreshMap(){
     navigator.geolocation.getCurrentPosition((position)=>{
       const {latitude, longitude}= position.coords
 
-      this.marker1=L.marker([latitude, longitude]).addTo(this.map)
+      this.marker1=L.marker([latitude, longitude], {icon:this.iconUser}).addTo(this.map)
 
       navigator.geolocation.watchPosition((updatedPosition)=>{
         const {latitude:newLatitude, longitude:newLongitude} = updatedPosition.coords
@@ -44,6 +53,10 @@ export class MapComponent implements OnInit {
       })
     })
 
+  }
+
+  setBgasociadosMarker(){
+    this.marker2=L.marker([10.3947306,-75.4904092], {icon:this.iconBGasociados}).addTo(this.map)
   }
   
 }
